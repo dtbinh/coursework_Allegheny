@@ -1,0 +1,148 @@
+Triples: 925
+Elapsed time: 0.613
+Results for 1000.txt
+Triples: 13654
+Elapsed time: 4.959
+Triples: 13654
+Elapsed time: 5.005
+Triples: 13654
+Elapsed time: 4.97
+Triples: 13654
+Elapsed time: 4.981
+Triples: 13654
+Elapsed time: 5.005
+Results for 2000.txt
+Triples: 220115
+Elapsed time: 44.226
+Triples: 220115
+Elapsed time: 44.062
+Triples: 220115
+Elapsed time: 43.903
+Results for 256.txt
+Trial 0
+Triples: 61
+Elapsed time: 0.072
+Trial 1
+Triples: 61
+Elapsed time: 0.071
+Trial 2
+Triples: 61
+Elapsed time: 0.074
+Trial 3
+Triples: 61
+Elapsed time: 0.076
+Trial 4
+Triples: 61
+Elapsed time: 0.071
+Results for 512.txt
+Trial 0
+Triples: 925
+Elapsed time: 0.583
+Trial 1
+Triples: 925
+Elapsed time: 0.582
+Trial 2
+Triples: 925
+Elapsed time: 0.586
+Trial 3
+Triples: 925
+Elapsed time: 0.576
+Trial 4
+Triples: 925
+Elapsed time: 0.576
+Results for 1000.txt
+Trial 0
+Triples: 13654
+Elapsed time: 4.933
+Trial 1
+Triples: 13654
+Elapsed time: 4.945
+Trial 2
+Triples: 13654
+Elapsed time: 4.935
+Trial 3
+Triples: 13654
+Elapsed time: 4.951
+Trial 4
+Triples: 13654
+Elapsed time: 4.911
+Results for 2000.txt
+Trial 0
+Triples: 220115
+Elapsed time: 43.669
+Trial 1
+Triples: 220115
+Elapsed time: 44.525
+Trial 2
+Triples: 220115
+Elapsed time: 43.547
+Trial 3
+Triples: 220115
+Elapsed time: 43.717
+Trial 4
+Triples: 220115
+Elapsed time: 43.822
+Results for 256.txt
+Trial 0
+Triples: 61
+Elapsed time: 0.08
+Trial 1
+Triples: 61
+Elapsed time: 0.07
+Trial 2
+Triples: 61
+Elapsed time: 0.071
+Trial 3
+Triples: 61
+Elapsed time: 0.072
+Trial 4
+Triples: 61
+Elapsed time: 0.07
+Results for 512.txt
+Trial 0
+Triples: 925
+Elapsed time: 0.582
+Trial 1
+Triples: 925
+Elapsed time: 0.578
+Trial 2
+Triples: 925
+Elapsed time: 0.588
+Trial 3
+Triples: 925
+Elapsed time: 0.586
+Trial 4
+Triples: 925
+Elapsed time: 0.579
+Results for 1000.txt
+Trial 0
+Triples: 13654
+Elapsed time: 4.95
+Trial 1
+Triples: 13654
+Elapsed time: 4.92
+Trial 2
+Triples: 13654
+Elapsed time: 4.93
+Trial 3
+Triples: 13654
+Elapsed time: 4.964
+Trial 4
+Triples: 13654
+Elapsed time: 4.981
+Results for 2000.txt
+Trial 0
+Triples: 220115
+Elapsed time: 43.54
+Trial 1
+Triples: 220115
+Elapsed time: 43.865
+Trial 2
+Triples: 220115
+Elapsed time: 43.586
+Trial 3
+Triples: 220115
+Elapsed time: 43.862
+Trial 4
+Triples: 220115
+Elapsed time: 43.833

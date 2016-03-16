@@ -1,0 +1,105 @@
+import static java.util.Arrays.*;
+
+public class Queen{
+
+    public static void Queen(){
+    }
+
+
+    public static void main(String[]args){
+        int[][] board = new int[8][8];
+        for(int x=0; x<8; x++ ){
+            for(int y=0; y<8; y++){
+                board[x][y]=0;
+            }
+        }
+
+        //printSolutionAndExit(board);
+        for (int row=0; row < 8; row++){
+            placeQueen(board, row);
+        }
+    }
+
+
+    public static void placeQueen(int[][] board, int row){
+
+        for(int col = 0; col<8; col++){
+            if(isLegalPlacement(board, row, col)){
+                addQueen(board, row, col);
+                if(row == 7){
+                    printSolutionAndExit(board);
+                }else{
+                    placeQueen(board, row+1);
+                }//else
+            }//if
+        }//for
+    }//placequeen
+
+    public static boolean isLegalPlacement(int[][] board, int row, int col){
+
+        int check;
+        boolean set = true;
+        int rowtemp = row;
+        int coltemp = col;
+        int QueenHere = 0;
+        int count = 0;
+        //CHECK FOR QUEEN IN SAME COLUMN
+        while (rowtemp >= 0){
+            QueenHere = board[rowtemp--][coltemp];
+            if(QueenHere == 1){
+                return false;
+            }
+        }
+
+        //CHECK FOR QUEEN IN LEFT DIAGONAL
+        rowtemp = row;
+        coltemp = col;
+        //coltemp = col-1;
+       // System.out.println(rowtemp+"    "+coltemp);
+        while(rowtemp>=0 && coltemp>=0){
+            if(board[rowtemp][coltemp]==1){
+                return false;
+            }
+            rowtemp= rowtemp-1;
+            coltemp= coltemp-1;
+           // System.out.println("row: "+rowtemp+" col: "+coltemp);
+        }
+
+
+
+
+        //CHECK FOR QUEEN IN RIGHT DIAGONALS
+
+
+        System.out.println("inside isLegalPlacement");
+
+           rowtemp = row;
+           coltemp = col;
+           while(rowtemp>=0 && coltemp<=7){
+           QueenHere = board[rowtemp][coltemp];
+           if(QueenHere == 1){
+           return false;
+           }else{
+           return true;
+           }
+           rowtemp = rowtemp-1;
+           coltemp = coltemp+1;
+    }
+        //return true;
+        return true;
+    }
+
+    public static void addQueen(int[][] board, int row, int col){
+        board[row][col] = 1;
+    }
+
+    public static void printSolutionAndExit(int[][] board){
+        for(int z = 0; z<8; z++){
+            for(int y=0; y<8; y++){
+                System.out.print(board[z][y]+" ");
+            }
+            System.out.println();
+        }
+    }
+
+}

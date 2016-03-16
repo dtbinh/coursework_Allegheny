@@ -1,0 +1,7 @@
+<context id="StupidModel" class="stupidmodel.StupidModelContextBuilder"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://repast.org/scenario/context">
+	<projection id="space" type="continuous space" />
+	<projection id="grid" type="grid" />
+	<projection id="foodValueLayer" type="value layer" />
+</context>

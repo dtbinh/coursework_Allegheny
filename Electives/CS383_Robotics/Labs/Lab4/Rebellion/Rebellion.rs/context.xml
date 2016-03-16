@@ -1,0 +1,8 @@
+<context id="Rebellion"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://repast.org/scenario/context"
+	class="rebellion.RebellionContextBuilder">
+	<projection type="continuous space" id="space"></projection>
+	<projection type="grid" id="grid"></projection>
+
+</context>

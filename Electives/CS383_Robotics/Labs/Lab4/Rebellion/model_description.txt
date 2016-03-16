@@ -1,0 +1,1 @@
+This is the Rebellion model. See docs/ReadMe for more information.
