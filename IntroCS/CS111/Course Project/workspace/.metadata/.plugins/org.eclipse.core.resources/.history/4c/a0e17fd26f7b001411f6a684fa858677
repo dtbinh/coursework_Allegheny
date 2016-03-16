@@ -1,0 +1,66 @@
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class MovieGenre {
+
+	//constructor
+	public MovieGenre()
+	{
+		
+	}
+	
+	//methods to read in array lists for different movie classes
+	public void Action()
+	{
+		ArrayList<String> ActionArray = new ArrayList<String>();
+		File actionList = new File("ArrayAction.txt");
+		Scanner scan = new Scanner(actionList);
+		while(scan.hasNext() == true){
+			String movie = scan.next();
+			actionList.add(movie);
+		}
+	}
+	
+	public void Classic()
+	{
+		
+	}
+	
+	public void Drama()
+	{
+		
+	}
+	
+	public void Historic()
+	{
+		
+	}
+	
+	public void Horror()
+	{
+		
+	}
+	
+	public void Mystery(){
+		
+	}
+	
+	public void Romance(){
+		
+	}
+	
+	public void RomCom(){
+		
+	}
+	
+	public void SciFi(){
+		
+	}
+	
+	public void Comedy(){
+		
+	}
+	
+}

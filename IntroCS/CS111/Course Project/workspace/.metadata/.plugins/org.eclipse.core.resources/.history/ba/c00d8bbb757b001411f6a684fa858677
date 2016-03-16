@@ -1,0 +1,37 @@
+
+public class GenerateTitles {
+
+}
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class ReadMovies {
+	int count = 0;
+	public ReadMovies()
+	{
+		count = 1; 
+	}
+	
+	public void getArrayList() throws FileNotFoundException
+	{
+	ArrayList<String> Action = new ArrayList<String>();
+	//read in Action movie text file
+	File ActionDoc = new File ("ArrayAction.txt");
+	Scanner scanner1 = new Scanner(ActionDoc);
+	while(scanner1.hasNext() == true)
+	{
+		String movie = scanner1.nextLine();
+		Action.add(movie);
+	}
+	System.out.println(Action);
+	}
+	
+	
+	
+}
+
+
+//use if else to go through genres untill it reaches the proper one, then go into the CreateArrayLists class to access and iterate through

@@ -1,0 +1,77 @@
+<project default="compile">
+
+    <!-- SETUP VARIABLES AND PATHS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <property name="src.dir" location="src/" />
+    <property name="build.dir" location="bin/" />
+    <property name="dist.dir" location="dist/" />
+    <property name="dist.name" value="GatorTweet" />
+    <property name="version" value="1.0" />
+
+    <!-- The classpath for running the system -->
+    <path id="build.classpath">
+        <pathelement path="${build.dir}"/>
+    </path>
+
+    <!-- BASIC TARGETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <!-- CLEANING TASK - "ant clean" -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+        <delete dir="${result.dir}"/>
+    </target>
+
+    <!-- COMPILING TASK - "ant compile" -->
+    <target name="compile">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false" debug="true" debuglevel="vars,lines,source">
+            <classpath refid="build.classpath"/>
+            <compilerarg value="-Xlint:deprecation"/>
+        </javac>
+    </target>
+
+    <!-- RUNNING TASK - "ant ArrayListBenchmarks " -->
+    <target name="ArrayListBenchmarks">
+        <java fork="true" classname="edu.allegheny.experiment.ArrayListBenchmarks" maxmemory="1024m">
+            <classpath refid="build.classpath" />
+            <arg value="" />
+        </java>
+    </target>
+
+    <!-- RUNNING TASK - "ant LinkedListBenchmarks " -->
+    <target name="LinkedListBenchmarks">
+        <java fork="true" classname="edu.allegheny.experiment.LinkedListBenchmarks" maxmemory="1024m">
+            <classpath refid="build.classpath" />
+            <arg value="" />
+        </java>
+    </target>
+
+     <!-- RUNNING TASK - "ant VectorBenchmarks " -->
+    <target name="VectorBenchmarks">
+        <java fork="true" classname="edu.allegheny.experiment.VectorBenchmarks" maxmemory="1024m">
+            <classpath refid="build.classpath" />
+            <arg value="" />
+        </java>
+    </target>
+
+
+     <!-- RUNNING TASK - "ant all " -->
+    <target name="all">
+        <java fork="true" classname="edu.allegheny.experiment.VectorBenchmarks" maxmemory="1024m">
+            <classpath refid="build.classpath" />
+            <arg value="" />
+        </java>
+        <java fork="true" classname="edu.allegheny.experiment.LinkedListBenchmarks" maxmemory="1024m">
+            <classpath refid="build.classpath" />
+            <arg value="" />
+        </java>
+        <java fork="true" classname="edu.allegheny.experiment.ArrayListBenchmarks" maxmemory="1024m">
+            <classpath refid="build.classpath" />
+            <arg value="" />
+        </java>
+    </target>
+
+
+
+
+</project>

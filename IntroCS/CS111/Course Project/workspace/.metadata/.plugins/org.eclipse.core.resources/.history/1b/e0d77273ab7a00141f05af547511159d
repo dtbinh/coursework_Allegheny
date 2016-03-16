@@ -1,0 +1,13 @@
+
+public class FindClass {
+	int count = 0;
+	public FindClass()
+	{
+		count = 1;
+	}
+	
+	
+	
+	
+	
+}

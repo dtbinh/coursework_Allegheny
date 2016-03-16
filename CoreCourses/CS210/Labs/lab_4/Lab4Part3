@@ -1,0 +1,128 @@
+#SJ Guillaume, Lab 4 Part 3
+# I hereby recognize and pledge to fulfill my responsibilities, as defined in the Honor Code, and to maintain the integrity of both myself and the College community as a whole.
+# Lab 4 Part 2: write a program using MIPS system calls
+
+
+	.data
+	.align 	2
+prompt:	.asciiz	"Please enter two variables, press enter after each one"	#prompt user to enter two values
+	.align 	2
+x:	.space	4	#space for value x
+	.align 	2
+y: 	.space	4	#space for value y
+logand:	.asciiz	"Logical and of x and y is: \n"
+logor:	.asciiz	"Logical or of x and y is: \n"
+logxor:	.asciiz "Logical xor of x and y is: \n"
+lshx:	.asciiz "Logical left shift of x by 2 places is: \n"
+lshy:	.asciiz "Logical left shift of y by 2 places is: \n"
+rshx:	.asciiz "Logical right shift of x by 2 places is: \n"
+rshy:	.asciiz "Logical right shift of y by 2 places is: \n"
+arshx:	.asciiz "Arithmetic right shift of x by 2 places is: \n"
+arshy:	.asciiz "Arithmetic right shift of y by 2 places is: \n"
+
+
+	
+	.text	
+	li $v0, 4	#syscall instructions to print string
+	la $a0, prompt	#loads msg into register $a0
+	syscall	
+
+	li $v0, 5	#syscall instruction to read int from command line
+	syscall		
+	add $t1, $zero, $v0
+	sw $t1, x	#store value of integer just entered into x
+	
+	
+	li $v0, 5	#syscall instruction to read int from command line
+	syscall
+	add $t2, $zero, $v0
+	sw $t2, y	#store value of integer just entered into y
+		
+	
+	#LOGICAL AND OF X AND Y	
+	and $t0, $t1, $t2	#bitwise and of x and y 
+	li $v0, 4	#syscall instructions to print string
+	la $a0, logand	#loads logand into register $a0
+	syscall	
+	add $a0,$zero,$t0
+	li $v0, 1	#syscall to print an integer
+	syscall
+	
+	
+	
+	#LOGICAL OR OF X AND Y
+	or $t0, $t1, $t2	#bitwise and of x and y 
+	li $v0, 4	#syscall instructions to print string
+	la $a0, logor	#loads logor into register $a0
+	syscall	
+	add $a0,$zero,$t0
+	li $v0, 1	#syscall to print an integer
+	syscall
+	
+	#LOGICAL XOR OF X AND Y
+	xor $t0, $t1, $t2	#bitwise and of x and y 
+	li $v0, 4	#syscall instructions to print string
+	la $a0, logxor	#loads logxor into register $a0
+	syscall	
+	add $a0,$zero,$t0
+	li $v0, 1	#syscall to print an integer
+	syscall
+	
+	
+	#LOGICAL LEFT SHIFT OF EACH VALUE BY 2 PLACES
+	sll $t0, $t1, 2
+	li $v0, 4	#syscall instructions to print string
+	la $a0, lshx	#loads lshx into register $a0
+	syscall	
+	add $a0,$zero,$t0
+	li $v0, 1	#syscall to print an integer
+	syscall
+	
+	sll $t0, $t2, 2
+	li $v0, 4	#syscall instructions to print string
+	la $a0, lshy	#loads lshy into register $a0
+	syscall	
+	add $a0,$zero,$t0
+	li $v0, 1	#syscall to print an integer
+	syscall
+	
+	#LOGICAL RIGHT SHIFT OF EACH VLAUE BY 2 PLACES
+
+	srl $t0, $t1, 2
+	li $v0, 4	#syscall instructions to print string
+	la $a0, rshx	#loads rshx into register $a0
+	syscall	
+	add $a0,$zero,$t0
+	li $v0, 1	#syscall to print an integer
+	syscall
+
+	srl $t0, $t2, 2
+	li $v0, 4	#syscall instructions to print string
+	la $a0, rshy	#loads rshy into register $a0
+	syscall	
+	add $a0,$zero,$t0
+	li $v0, 1	#syscall to print an integer
+	syscall	
+	
+	
+	#THE ARITHMETIC RIGHT SHIFT OF EACH VALUE BY 2 PLACES
+
+	sra $t0, $t1, 2
+	li $v0, 4	#syscall instructions to print string
+	la $a0, arshx	#loads arshx into register $a0
+	syscall	
+	add $a0,$zero,$t0
+	li $v0, 1	#syscall to print an integer
+	syscall
+	
+	sra $t0, $t2, 2
+	li $v0, 4	#syscall instructions to print string
+	la $a0, arshy	#loads arshy into register $a0
+	syscall	
+	add $a0,$zero,$t0
+	li $v0, 1	#syscall to print an integer
+	syscall
+	
+	
+	li $v0, 10	#system call to exit 
+	syscall

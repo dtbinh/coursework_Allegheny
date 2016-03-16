@@ -1,0 +1,12 @@
+Ritchie created C with hardware in mind, and with the goal of
+making access to this hardware as efficient as possible while
+preserving the readability and portability that assembly
+language lacks. So it's not surprising that C is still used
+for embedded systems and other code that refers to hardware
+ports or specific memory locations. But C has also proven a
+darn good fit for any code requiring bit-level operations.
+Finally, it is still first choice for blazingly fast
+applications, which is why every modern scripting language has
+some kind of C gateway and why programmers still "drop down to
+C" for some operations.
+--http://radar.oreilly.com/2011/10/on-dennis-ritchie-a-conversati.html

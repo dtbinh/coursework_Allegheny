@@ -1,0 +1,25 @@
+#SJ Guillaume, Lab 4 Part 2
+# I hereby recognize and pledge to fulfill my responsibilities, as defined in the Honor Code, and to maintain the integrity of both myself and the College community as a whole.
+# Lab 4 Part 2: learn about IO and MIPS
+#      int value: 30;
+
+	.data
+	.align 2
+value: 	.word	30	# value = 30;
+msg: 	.asciiz	"this is a message"	#string message
+
+	.text
+
+	li $v0, 1	#syscall instruction to print int
+	la $a0, value	#address of integer to print
+	syscall 
+	
+	li $v0, 5	#syscall instruction to read in an integer
+	syscall
+
+	li $v0, 4	#syscall instructions to print string
+	la $a0, msg	#loads msg into register $a0
+	syscall
+	
+	li $v0, 10	#system call to exit 
+	syscall

@@ -1,0 +1,43 @@
+
+public class MainMovie {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Welcome to Movie Magic!!!!");
+		System.out.println("Here is a list of all the movie genres: Action, Classic, Comedy, Drama, Historical, Horror, Mystery, Roman					tic-Comedy, Romance, Science-Fiction,");
+//Thriller, Musicals, War, or Westerns.Ó);
+		System.out.println("You can choose from three options: ");
+		System.out.println("1. Choose a genre for a random movie selection."); 
+		System.out.println("2. Have Movie Majic choose a genre for me.");
+		System.out.println();
+		System.out.println("4. Please enter the number of the choice you select: ");
+		int choice = scan.nextInt();
+		
+		classic = new ArrayList<ArrayClassic>();
+
+
+		if(choice == 1)
+			{
+			System.out.println("From the list above, enter a movie genre.");
+			String genreChoice = scan.nextLine();
+			//introduce all arrays and choose a random array then a random movie from
+			// that array.
+			}
+		else if(choice == 2)
+			{
+			//ask user to input which movie genre they want a random movie to be
+			//choosen from.  Introduce a while loop to see if user if satisfied
+			//or if they would like another random movie to be selected. 
+			}
+		else if(choice == 3)
+			{
+			//give a list of 10 movies from different genres
+			}
+		else ()
+			{
+			System.out.println("That number doesn't even exist, you goofball!!!");
+			}
+
+	}
+
+}

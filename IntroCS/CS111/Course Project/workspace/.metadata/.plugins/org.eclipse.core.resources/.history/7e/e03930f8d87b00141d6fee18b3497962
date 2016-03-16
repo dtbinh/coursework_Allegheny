@@ -1,0 +1,96 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.Random;
+
+public class MovieChoices {
+
+int count;
+
+	public MovieChoices()
+	{
+		count = 0;
+	}
+	
+	public String chooseGenre(String genre) throws IOException{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the genre you desire from the list above: ");
+		genre = scan.nextLine();
+		genre.toUpperCase();
+		MovieGenre movieGenre = new MovieGenre();
+		if (genre == "ACTION"){
+			movieGenre.Action();
+		}
+		else if (genre == "CLASSIC"){
+			movieGenre.Classic();
+		}
+		else if (genre == "COMEDY"){
+			movieGenre.Comedy();
+		}
+		else if (genre == "DRAMA"){
+			movieGenre.Drama();
+		}
+		else if (genre == "HISTORIC"){
+			movieGenre.Historic();
+		}
+		else if (genre == "HORROR"){
+			movieGenre.Horror();
+		}
+		else if (genre == "MYSTERY"){
+			movieGenre.Mystery();
+		}
+		else if (genre == "ROMANCE"){
+			movieGenre.Romance();
+		}
+		else if (genre == "ROMCOM"){
+			movieGenre.RomCom();
+		}
+		else if (genre == "SCIFI"){
+			movieGenre.SciFi();
+		}
+		else {
+			System.out.println("Invalid input.");
+		}
+		return genre;
+	}
+	
+	public String chooseRandom(String genre) throws IOException{
+		
+		Random rand = new Random();
+		MovieGenre movieGenre = new MovieGenre();
+		int num = rand.nextInt(10);
+		if (num==0){
+			movieGenre.Action();
+		}
+		else if (num ==1){
+			movieGenre.Classic();
+		}
+		else if (num ==2){
+			movieGenre.Comedy();
+		}
+		else if(num == 3){
+			movieGenre.Drama();
+		}
+		else if(num == 4){
+			movieGenre.Historic();
+		}
+		else if(num ==5){
+			movieGenre.Horror();
+		}
+		else if(num == 6){
+			movieGenre.Mystery();
+		}
+		else if(num == 7){
+			movieGenre.Romance();
+		}
+		else if(num ==8){
+			movieGenre.RomCom();
+		}
+		else {
+			movieGenre.SciFi();
+		}
+		
+		
+		return genre;
+	}
+	
+}

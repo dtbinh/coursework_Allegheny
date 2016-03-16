@@ -1,0 +1,40 @@
+
+public class HowManyMovies {
+	int count = 0;
+	public HowManyMovies ()
+	{
+		count = 1;
+	}
+	
+	
+	
+	public void getrandom()
+	{
+		
+	}
+	
+	public void getsmallList()
+	{
+		
+	}
+	
+	public void getwholeList()
+	{
+		
+	}
+
+}
+
+System.out.println("From the list above, enter a movie genre.");
+String genreChoice = scan.nextLine();
+System.out.println("Would you like a list of 10 random movies from this genre or one random selection?");
+System.out.println("Enter 1 for a list.  Enter 2 for a single movie.");
+int listChoice = scan.nextInt();
+genreChoice.toUpperCase();
+if (listChoice == 1)
+	{
+	System.out.println("You asked for a list of 10 movies from the genre " + genreChoice);
+	//generate a random list now using a while loop and a count to go to 10 and then exit the loop
+	//ask if satisfied
+	//if not satisfied remove a certain movie or generate another list
+	//consider storing in an array with size of 10, create an array. 

@@ -1,0 +1,35 @@
+Sample floating-point conversion.
+
+Convert 5.12 into floating point.
+
+Step 1: 5 is 101 in binary
+
+Step 2: .12 x 2 = 0.24
+        .24 x 2 = 0.48
+        .48 x 2 = 0.96
+        .96 x 2 = 1.92
+        .92 x 2 = 1.84
+        .84 x 2 = 1.68
+        .68 x 2 = 1.36
+        .36 x 2 = 0.72
+        .72 x 2 = 1.44
+        .44 x 2 = 0.88
+        .88 x 2 = 1.76
+        .76 x 2 = 1.52
+        .52 x 2 = 1.04 
+        .04 x 2 = 0.08
+        .08 x 2 = 0.16
+        .16 x 2 = 0.32
+        .32 x 2 = 0.64
+        .64 x 2 = 1.28
+        .28 x 2 = 0.56
+            etc.
+   .12 in binary is .0001111010111000010...
+
+Step 3: 101.0001111010111000010... = 1.010001111010111000010...x 2^2
+
+Step 4: exponent = 2 + 127 = 10000001
+
+Final f.p. representation: 0 10000001 010001111010111000010...
+(It's not too hard to compute the last few bits.)
+

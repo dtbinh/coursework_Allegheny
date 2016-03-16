@@ -1,0 +1,13 @@
+Status Report 2: 
+
+So far there are not significant changes since the first draft, still need to devote some of my heart and sole to the project.  
+
+I will instead make a list of my plan to complete the project instead of reiterating the current progress of the project.  
+
+List: 
+1. multiplication
+2. division
+3. variables and the .data section to go with it including .align 2 etc. 
+4. multiple expressions? 
+5. comment and put name and header
+

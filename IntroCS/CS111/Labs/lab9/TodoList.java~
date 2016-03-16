@@ -1,0 +1,73 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
+
+public class TodoList {
+
+    private ArrayList<TodoItem> todoItems;
+    private static final String TODOFILE = "todo.txt";
+
+    public TodoList() {
+        todoItems = new ArrayList<TodoItem>();
+    }
+
+    public void addTodoItem(TodoItem todoItem) {
+        todoItems.add(todoItem);
+    }
+
+    public Iterator getTodoItems() {
+        return todoItems.iterator();
+    }
+
+    public void readTodoItemsFromFile() throws IOException {
+        Scanner fileScanner = new Scanner(new File(TODOFILE));
+        while(fileScanner.hasNext()) {
+            String todoItemLine = fileScanner.nextLine();
+            Scanner todoScanner = new Scanner(todoItemLine);
+            todoScanner.useDelimiter(",");
+            String priority, category, task;
+            priority = todoScanner.next();
+            category = todoScanner.next();
+            task = todoScanner.next();
+            TodoItem todoItem = new TodoItem(priority, category, task);
+            todoItems.add(todoItem);
+        }
+    }
+
+    public void markTaskAsDone(int toMarkId) {
+        Iterator iterator = todoItems.iterator();
+        while(iterator.hasNext()) {
+            TodoItem todoItem = (TodoItem)iterator.next();
+            if(todoItem.getId() == toMarkId) {
+                todoItem.markDone();
+            }
+        }
+    }
+
+    public Iterator findTasksOfPriority(String requestedPriority) {
+        ArrayList<TodoItem> priorityList = new ArrayList<TodoItem>();
+        // TODO: Add source code that will find and return all tasks of the requestedPriority
+        return priorityList.iterator();
+    }
+
+    public Iterator findTasksOfCategory(String requestedCategory) {
+        ArrayList<TodoItem> categoryList = new ArrayList<TodoItem>();
+        // TODO: Add source code that will find and return all tasks fo the requestedCategory
+        return categoryList.iterator();
+    }
+
+    public String toString() {
+        StringBuffer buffer = new StringBuffer();
+        Iterator iterator = todoItems.iterator();
+        while(iterator.hasNext()) {
+            buffer.append(iterator.next().toString());
+            if(iterator.hasNext()) {
+                buffer.append("\n");
+            }
+        }
+        return buffer.toString();
+    }
+
+}

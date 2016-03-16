@@ -1,0 +1,222 @@
+!SESSION 2014-11-20 14:37:00.124 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY repast.simphony.batch 4 0 2014-11-20 14:37:02.073
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: repast.simphony.batch [358]
+  Unresolved requirement: Require-Bundle: repast.simphony.gis
+    -> Bundle-SymbolicName: repast.simphony.gis; bundle-version="2.2.0"
+       repast.simphony.gis [372]
+         Unresolved requirement: Require-Bundle: repast.simphony.dataLoader
+           -> Bundle-SymbolicName: repast.simphony.dataLoader; bundle-version="2.2.0"
+              repast.simphony.dataLoader [364]
+                Unresolved requirement: Require-Bundle: repast.simphony.plugin.util
+                  -> Bundle-SymbolicName: repast.simphony.plugin.util; bundle-version="2.2.0"
+                     repast.simphony.plugin.util [382]
+                       No resolution report for the bundle.  Unresolved requirement: Require-Bundle: repast.simphony.dataLoader
+    -> Bundle-SymbolicName: repast.simphony.dataLoader; bundle-version="2.2.0"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource repast.simphony.batch [osgi.identity; osgi.identity="repast.simphony.batch"; type="osgi.bundle"; version:Version="2.2.0"; singleton:="true"] because it is exposed to package 'junit.framework' from resources repast.simphony.runtime [osgi.identity; osgi.identity="repast.simphony.runtime"; type="osgi.bundle"; version:Version="2.2.0"] and org.junit [osgi.identity; osgi.identity="org.junit"; type="osgi.bundle"; version:Version="4.11.0.v201303080030"] via two dependency chains.
+
+Chain 1:
+  repast.simphony.batch [osgi.identity; osgi.identity="repast.simphony.batch"; type="osgi.bundle"; version:Version="2.2.0"; singleton:="true"]
+    require: (osgi.wiring.bundle=repast.simphony.runtime)
+     |
+    provide: osgi.wiring.bundle: repast.simphony.runtime
+  repast.simphony.runtime [osgi.identity; osgi.identity="repast.simphony.runtime"; type="osgi.bundle"; version:Version="2.2.0"]
+
+Chain 2:
+  repast.simphony.batch [osgi.identity; osgi.identity="repast.simphony.batch"; type="osgi.bundle"; version:Version="2.2.0"; singleton:="true"]
+    require: (osgi.wiring.bundle=repast.simphony.scenario)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.2.0"; osgi.wiring.bundle="repast.simphony.scenario"; singleton:="true"
+  repast.simphony.scenario [osgi.identity; osgi.identity="repast.simphony.scenario"; type="osgi.bundle"; version:Version="2.2.0"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.junit)
+     |
+    provide: osgi.wiring.bundle: org.junit
+  org.junit [osgi.identity; osgi.identity="org.junit"; type="osgi.bundle"; version:Version="4.11.0.v201303080030"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY repast.simphony.relogo.ide 4 0 2014-11-20 14:37:02.169
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: repast.simphony.relogo.ide [384]
+  Unresolved requirement: Import-Package: repast.simphony.relogo.image
+    -> Export-Package: repast.simphony.relogo.image; bundle-symbolic-name="repast.simphony.relogo.runtime"; bundle-version="2.2.0"; version="0.0.0"
+       repast.simphony.relogo.runtime [385]
+         Unresolved requirement: Require-Bundle: repast.simphony.essentials; bundle-version="2.0.0"
+           -> Bundle-SymbolicName: repast.simphony.essentials; bundle-version="2.2.0"
+              repast.simphony.essentials [369]
+                Unresolved requirement: Require-Bundle: repast.simphony.sql
+                  -> Bundle-SymbolicName: repast.simphony.sql; bundle-version="2.2.0"
+                     repast.simphony.sql [389]
+                       Unresolved requirement: Require-Bundle: repast.simphony.data.ui
+                         -> Bundle-SymbolicName: repast.simphony.data.ui; bundle-version="2.2.0"
+                            repast.simphony.data.ui [363]
+                              Unresolved requirement: Require-Bundle: repast.simphony.plugin.util
+                                -> Bundle-SymbolicName: repast.simphony.plugin.util; bundle-version="2.2.0"
+                                   repast.simphony.plugin.util [382]
+                                     No resolution report for the bundle.         Unresolved requirement: Require-Bundle: repast.simphony.userpanel.ui; bundle-version="2.0.0"
+           -> Bundle-SymbolicName: repast.simphony.userpanel.ui; bundle-version="2.2.0"
+              repast.simphony.userpanel.ui [401]
+                Unresolved requirement: Require-Bundle: repast.simphony.plugin.util
+                  -> Bundle-SymbolicName: repast.simphony.plugin.util; bundle-version="2.2.0"
+         Unresolved requirement: Require-Bundle: repast.simphony.visualization; bundle-version="2.0.0"
+           -> Bundle-SymbolicName: repast.simphony.visualization; bundle-version="2.2.0"
+              repast.simphony.visualization [402]
+                Unresolved requirement: Require-Bundle: repast.simphony.plugin.util
+                  -> Bundle-SymbolicName: repast.simphony.plugin.util; bundle-version="2.2.0"
+  Unresolved requirement: Import-Package: repast.simphony.relogo.util
+    -> Export-Package: repast.simphony.relogo.util; bundle-symbolic-name="repast.simphony.relogo.runtime"; bundle-version="2.2.0"; version="0.0.0"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource repast.simphony.relogo.runtime [osgi.identity; osgi.identity="repast.simphony.relogo.runtime"; type="osgi.bundle"; version:Version="2.2.0"] because it is exposed to package 'junit.framework' from resources repast.simphony.runtime [osgi.identity; osgi.identity="repast.simphony.runtime"; type="osgi.bundle"; version:Version="2.2.0"] and org.junit [osgi.identity; osgi.identity="org.junit"; type="osgi.bundle"; version:Version="4.11.0.v201303080030"] via two dependency chains.
+
+Chain 1:
+  repast.simphony.relogo.runtime [osgi.identity; osgi.identity="repast.simphony.relogo.runtime"; type="osgi.bundle"; version:Version="2.2.0"]
+    require: (&(osgi.wiring.bundle=repast.simphony.runtime)(bundle-version>=2.0.0))
+     |
+    provide: osgi.wiring.bundle: repast.simphony.runtime
+  repast.simphony.runtime [osgi.identity; osgi.identity="repast.simphony.runtime"; type="osgi.bundle"; version:Version="2.2.0"]
+
+Chain 2:
+  repast.simphony.relogo.runtime [osgi.identity; osgi.identity="repast.simphony.relogo.runtime"; type="osgi.bundle"; version:Version="2.2.0"]
+    require: (&(osgi.wiring.bundle=repast.simphony.scenario)(bundle-version>=2.0.0))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.2.0"; osgi.wiring.bundle="repast.simphony.scenario"; singleton:="true"
+  repast.simphony.scenario [osgi.identity; osgi.identity="repast.simphony.scenario"; type="osgi.bundle"; version:Version="2.2.0"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.junit)
+     |
+    provide: osgi.wiring.bundle: org.junit
+  org.junit [osgi.identity; osgi.identity="org.junit"; type="osgi.bundle"; version:Version="4.11.0.v201303080030"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+!SESSION 2015-01-14 14:16:03.369 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY repast.simphony.batch 4 0 2015-01-14 14:16:06.137
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: repast.simphony.batch [358]
+  Unresolved requirement: Require-Bundle: repast.simphony.dataLoader
+    -> Bundle-SymbolicName: repast.simphony.dataLoader; bundle-version="2.2.0"
+       repast.simphony.dataLoader [364]
+         Unresolved requirement: Require-Bundle: repast.simphony.plugin.util
+           -> Bundle-SymbolicName: repast.simphony.plugin.util; bundle-version="2.2.0"
+              repast.simphony.plugin.util [382]
+                No resolution report for the bundle.  Unresolved requirement: Require-Bundle: repast.simphony.gis
+    -> Bundle-SymbolicName: repast.simphony.gis; bundle-version="2.2.0"
+       repast.simphony.gis [372]
+         Unresolved requirement: Require-Bundle: repast.simphony.dataLoader
+           -> Bundle-SymbolicName: repast.simphony.dataLoader; bundle-version="2.2.0"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource repast.simphony.batch [osgi.identity; osgi.identity="repast.simphony.batch"; type="osgi.bundle"; version:Version="2.2.0"; singleton:="true"] because it is exposed to package 'junit.framework' from resources repast.simphony.runtime [osgi.identity; osgi.identity="repast.simphony.runtime"; type="osgi.bundle"; version:Version="2.2.0"] and org.junit [osgi.identity; osgi.identity="org.junit"; type="osgi.bundle"; version:Version="4.11.0.v201303080030"] via two dependency chains.
+
+Chain 1:
+  repast.simphony.batch [osgi.identity; osgi.identity="repast.simphony.batch"; type="osgi.bundle"; version:Version="2.2.0"; singleton:="true"]
+    require: (osgi.wiring.bundle=repast.simphony.runtime)
+     |
+    provide: osgi.wiring.bundle: repast.simphony.runtime
+  repast.simphony.runtime [osgi.identity; osgi.identity="repast.simphony.runtime"; type="osgi.bundle"; version:Version="2.2.0"]
+
+Chain 2:
+  repast.simphony.batch [osgi.identity; osgi.identity="repast.simphony.batch"; type="osgi.bundle"; version:Version="2.2.0"; singleton:="true"]
+    require: (osgi.wiring.bundle=repast.simphony.scenario)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.2.0"; osgi.wiring.bundle="repast.simphony.scenario"; singleton:="true"
+  repast.simphony.scenario [osgi.identity; osgi.identity="repast.simphony.scenario"; type="osgi.bundle"; version:Version="2.2.0"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.junit)
+     |
+    provide: osgi.wiring.bundle: org.junit
+  org.junit [osgi.identity; osgi.identity="org.junit"; type="osgi.bundle"; version:Version="4.11.0.v201303080030"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY repast.simphony.relogo.ide 4 0 2015-01-14 14:16:06.233
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: repast.simphony.relogo.ide [384]
+  Unresolved requirement: Import-Package: repast.simphony.relogo.image
+    -> Export-Package: repast.simphony.relogo.image; bundle-symbolic-name="repast.simphony.relogo.runtime"; bundle-version="2.2.0"; version="0.0.0"
+       repast.simphony.relogo.runtime [385]
+         Unresolved requirement: Require-Bundle: repast.simphony.essentials; bundle-version="2.0.0"
+           -> Bundle-SymbolicName: repast.simphony.essentials; bundle-version="2.2.0"
+              repast.simphony.essentials [369]
+                Unresolved requirement: Require-Bundle: repast.simphony.sql
+                  -> Bundle-SymbolicName: repast.simphony.sql; bundle-version="2.2.0"
+                     repast.simphony.sql [389]
+                       Unresolved requirement: Require-Bundle: repast.simphony.data.ui
+                         -> Bundle-SymbolicName: repast.simphony.data.ui; bundle-version="2.2.0"
+                            repast.simphony.data.ui [363]
+                              Unresolved requirement: Require-Bundle: repast.simphony.plugin.util
+                                -> Bundle-SymbolicName: repast.simphony.plugin.util; bundle-version="2.2.0"
+                                   repast.simphony.plugin.util [382]
+                                     No resolution report for the bundle.         Unresolved requirement: Require-Bundle: repast.simphony.visualization; bundle-version="2.0.0"
+           -> Bundle-SymbolicName: repast.simphony.visualization; bundle-version="2.2.0"
+              repast.simphony.visualization [402]
+                Unresolved requirement: Require-Bundle: repast.simphony.plugin.util
+                  -> Bundle-SymbolicName: repast.simphony.plugin.util; bundle-version="2.2.0"
+         Unresolved requirement: Require-Bundle: repast.simphony.userpanel.ui; bundle-version="2.0.0"
+           -> Bundle-SymbolicName: repast.simphony.userpanel.ui; bundle-version="2.2.0"
+              repast.simphony.userpanel.ui [401]
+                Unresolved requirement: Require-Bundle: repast.simphony.plugin.util
+                  -> Bundle-SymbolicName: repast.simphony.plugin.util; bundle-version="2.2.0"
+  Unresolved requirement: Import-Package: repast.simphony.relogo.util
+    -> Export-Package: repast.simphony.relogo.util; bundle-symbolic-name="repast.simphony.relogo.runtime"; bundle-version="2.2.0"; version="0.0.0"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource repast.simphony.relogo.runtime [osgi.identity; osgi.identity="repast.simphony.relogo.runtime"; type="osgi.bundle"; version:Version="2.2.0"] because it is exposed to package 'junit.framework' from resources repast.simphony.runtime [osgi.identity; osgi.identity="repast.simphony.runtime"; type="osgi.bundle"; version:Version="2.2.0"] and org.junit [osgi.identity; osgi.identity="org.junit"; type="osgi.bundle"; version:Version="4.11.0.v201303080030"] via two dependency chains.
+
+Chain 1:
+  repast.simphony.relogo.runtime [osgi.identity; osgi.identity="repast.simphony.relogo.runtime"; type="osgi.bundle"; version:Version="2.2.0"]
+    require: (&(osgi.wiring.bundle=repast.simphony.runtime)(bundle-version>=2.0.0))
+     |
+    provide: osgi.wiring.bundle: repast.simphony.runtime
+  repast.simphony.runtime [osgi.identity; osgi.identity="repast.simphony.runtime"; type="osgi.bundle"; version:Version="2.2.0"]
+
+Chain 2:
+  repast.simphony.relogo.runtime [osgi.identity; osgi.identity="repast.simphony.relogo.runtime"; type="osgi.bundle"; version:Version="2.2.0"]
+    require: (&(osgi.wiring.bundle=repast.simphony.scenario)(bundle-version>=2.0.0))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.2.0"; osgi.wiring.bundle="repast.simphony.scenario"; singleton:="true"
+  repast.simphony.scenario [osgi.identity; osgi.identity="repast.simphony.scenario"; type="osgi.bundle"; version:Version="2.2.0"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.junit)
+     |
+    provide: osgi.wiring.bundle: org.junit
+  org.junit [osgi.identity; osgi.identity="org.junit"; type="osgi.bundle"; version:Version="4.11.0.v201303080030"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)

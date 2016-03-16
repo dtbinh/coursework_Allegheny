@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class MovieChoices {
+
+
+
+	public MovieChoices()
+	{
+		
+	}
+	
+	public String chooseGenre(String genre){
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the genre you desire from the list above: ");
+		genre = scan.next();
+		genre.toUpperCase();
+		return genre;
+	}
+	
+	public String chooseRandom(String genre){
+		String genre;
+		Random rand = new Random();
+		int num = rand.nextInt(10);
+		if (num==0){
+			genre = "ACTION	";
+		}
+		else if (num ==1){
+			genre = "CLASSIC";
+		}
+		else if (num ==2){
+			genre = "DRAMA";
+		}
+		else if(num == 3){
+			genre = "HISTORICAL"
+		}
+		else if(num == 4){
+			genre = "HORROR";
+		}
+		else if(num ==5){
+			genre = "MYSTERY";
+		}
+		else if(num == 6){
+			genre = "ROMANCE";
+		}
+		else if(num == 7){
+			genre = "ROMCOM";
+		}
+		else if(num ==8){
+			genre = "SCIFI";
+		}
+		else (){
+			genre = "COMEDY";
+		}
+		
+		
+		return genre;
+	}
+	
+}

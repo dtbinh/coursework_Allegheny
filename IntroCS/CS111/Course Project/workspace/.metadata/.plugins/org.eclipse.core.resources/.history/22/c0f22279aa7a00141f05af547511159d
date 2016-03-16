@@ -1,0 +1,76 @@
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class MainMovie {
+
+	public static void main(String[] args) throws IOException {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Welcome to Movie Magic!!!!");
+		System.out.println("Here is a list of all the movie genres: Action, Classic, Comedy, Drama, Historical, Horror, Mystery, Romantic-Comedy, Romance, Science-Fiction,");
+		System.out.println("You can choose from three options: ");
+		System.out.println("1. Choose a genre for a random movie selection."); 
+		System.out.println("2. Have Movie Majic choose a genre for me.");
+		System.out.println();
+		System.out.println("4. Please enter the number of the choice you select: ");
+		int choice = scan.nextInt();
+		
+		ArrayList<String> Action = new ArrayList<String>();
+		//read in Action movie text file
+		File ActionDoc = new File ("ArrayAction.txt");
+		Scanner scanner1 = new Scanner(ActionDoc);
+		while(scanner1.hasNext() == true)
+		{
+			String movie = scanner1.nextLine();
+			Action.add(movie);
+		}
+		System.out.println(Action);
+		
+
+
+		if(choice == 1)
+			{
+			System.out.println("From the list above, enter a movie genre.");
+			String genreChoice = scan.nextLine();
+			System.out.println("Would you like a list of 10 random movies from this genre or one random selection?");
+			System.out.println("Enter 1 for a list.  Enter 2 for a single movie.");
+			int listChoice = scan.nextInt();
+			genreChoice.toUpperCase();
+			if (listChoice == 1)
+				{
+				System.out.println("You asked for a list of 10 movies from the genre " + genreChoice);
+				//generate a random list now using a while loop and a count to go to 10 and then exit the loop
+				//ask if satisfied
+				//if not satisfied remove a certain movie or generate another list
+				//consider storing in an array with size of 10, create an array. 
+				}
+			else if (listChoice == 2)
+			{
+				System.out.println("You asked for a single movie selection of the genre " +genreChoice);
+				//generate a random movie, ask if that movie satisfies the user, if not print another movie
+				//ask if user has seen that movie already, if so, remove from list
+			}
+			
+			
+			//introduce all arrays and choose a random array then a random movie from
+			// that array.
+			}
+		else if(choice == 2)
+			{
+			//ask user to input which movie genre they want a random movie to be
+			//chosen from.  Introduce a while loop to see if user if satisfied
+			//or if they would like another random movie to be selected. 
+			}
+		else if(choice == 3)
+			{
+			//give a list of 10 movies from different genres
+			}
+		else 
+			{
+			System.out.println("That number doesn't even exist, you goofball!!!");
+			}
+
+	}
+
+}

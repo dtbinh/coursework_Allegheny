@@ -1,0 +1,75 @@
+OUTPUT 1
+
+guillaumes@aldenv167:~/cs111F2014/cs111f2014-guillaumes2$ javac Lab3.java
+guillaumes@aldenv167:~/cs111F2014/cs111f2014-guillaumes2$ java Lab3
+SJ Guillaume
+ Lab #3 
+Thu Sep 18 15:18:22 EDT 2014
+
+Welcome to the Tip Calculator
+What is your name?
+Sarah
+Hello, Sarah
+What is the cost listed on your bill? 
+40
+What percentage would you like to tip? 
+15
+Sarah, your bill came to $40.0
+Your tip amount is $6.0
+Your total bill is $46.0
+How many people will be splitting the bill? 
+3
+ Each person should pay $15.333333333333334
+Thanks for using Tip Calculator! Have a great day!
+guillaumes@aldenv167:~/cs111F2014/cs111f2014-guillaumes2$ 
+
+
+
+OUTPUT 2
+
+guillaumes@aldenv167:~/cs111F2014/cs111f2014-guillaumes2$ java Lab3
+SJ Guillaume
+ Lab #3 
+Thu Sep 18 15:19:08 EDT 2014
+
+Welcome to the Tip Calculator
+What is your name?
+SJ
+Hello, SJ
+What is the cost listed on your bill? 
+133
+What percentage would you like to tip? 
+25
+SJ, your bill came to $133.0
+Your tip amout is $33.25
+Your total bill is $166.25
+How many people will be splitting the bill? 
+8
+ Each person should pay $20.78125
+Thanks for using Tip Calculator! Have a great day!
+guillaumes@aldenv167:~/cs111F2014/cs111f2014-guillaumes2$ 
+
+
+OUTPUT 3
+
+guillaumes@aldenv167:~/cs111F2014/cs111f2014-guillaumes2$ java Lab3
+SJ Guillaume
+ Lab #3 
+Thu Sep 18 15:19:57 EDT 2014
+
+Welcome to the Tip Calculator
+What is your name?
+SarahJane
+Hello, SarahJane
+What is the cost listed on your bill? 
+798
+What percentage would you like to tip? 
+15
+SarahJane, your bill came to $798.0
+Your tip amout is $119.69999999999999
+Your total bill is $917.7
+How many people will be splitting the bill? 
+63
+ Each person should pay $14.566666666666668
+Thanks for using Tip Calculator! Have a great day!
+guillaumes@aldenv167:~/cs111F2014/cs111f2014-guillaumes2$

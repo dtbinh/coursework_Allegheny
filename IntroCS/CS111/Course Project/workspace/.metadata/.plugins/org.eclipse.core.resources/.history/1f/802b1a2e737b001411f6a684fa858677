@@ -1,0 +1,75 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class MovieGenre {
+
+	//constructor
+	public MovieGenre()
+	{
+		
+	}
+	
+	//methods to read in array lists for different movie classes
+	public String Action() throws IOException
+	{
+		ArrayList<String> ActionArray = new ArrayList<String>();
+		File actionList = new File("ArrayAction.txt");
+		Scanner scan1 = new Scanner(actionList);
+		while(scan1.hasNext() == true){
+			String movie = scan1.next();
+			ActionArray.add(movie);
+		}
+		return Action();
+	}
+	
+	public void Classic() throws IOException
+	{
+		ArrayList<String> ClassicArray = new ArrayList<String>();
+		File classicList = new File("ArrayClassic.txt");
+		Scanner scan2 = new Scanner(classicList);
+		while(scan2.hasNext() == true {
+			String movie = scan2.next();
+			ClassicArray.add(movie);
+		})
+	}
+	
+	public void Drama()
+	{
+		
+	}
+	
+	public void Historic()
+	{
+		
+	}
+	
+	public void Horror()
+	{
+		
+	}
+	
+	public void Mystery(){
+		
+	}
+	
+	public void Romance(){
+		
+	}
+	
+	public void RomCom(){
+		
+	}
+	
+	public void SciFi(){
+		
+	}
+	
+	public void Comedy(){
+		
+	}
+	
+}

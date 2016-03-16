@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class MovieChoices {
+
+
+
+	public MovieChoices()
+	{
+		
+	}
+	
+	public String chooseGenre(String genre){
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the genre you desire from the list above: ");
+		genre = scan.next();
+		genre.toUpperCase();
+		return genre;
+	}
+	
+	public static String chooseRandom(String genre){
+		enum Genre {Action, Classic, Drama, Historical, Horror, Mystery, Romance, RomCom, SciFi, Comedy}
+		Random rand = new Random();
+		int num = rand.nextInt(10);
+		
+		return genre;
+	}
+	
+}

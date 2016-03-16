@@ -1,0 +1,55 @@
+
+import java.util.Scanner;
+
+public class WhatType {
+
+	Scanner scan = new Scanner(System.in);
+	public String type; 
+	
+	public void WhatType()
+	{
+		
+	}
+	
+	public void firstQuestion()
+	{
+		System.out.println("What genre do you want to choose from?");
+		type = scan.next();
+		type = type.toUpperCase();
+		System.out.println("You chose the genre: "+type);
+		
+	}
+	
+	public void secondQuestion()
+	{
+		int choice = 4;
+		while (choice >3 || choice <1)
+		{
+		System.out.println("Select one of the options: ");
+		System.out.println("1. Give me one random "+type+" movie." );
+		System.out.println("2. Give me ten random "+type+" movies.");
+		System.out.println("3. Give me the whole list of "+type+" movies.");
+		System.out.println("Enter the number of your choice: ");
+		choice = scan.nextInt();
+		
+		if (choice == 1)
+		{
+			
+		}
+		else if (choice == 2)
+		{
+			
+		}
+		else if (choice == 3)
+		{
+			
+		}
+		else 
+		{
+		System.out.println("You entered an invalid number, try again.");
+		}
+		}
+	}
+	
+	
+}

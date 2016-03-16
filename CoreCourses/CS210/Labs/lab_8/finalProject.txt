@@ -1,0 +1,21 @@
+SJ Guillaume
+Lab 8 Part 6
+2 November 2015
+Honor Code Pledge acknowledged
+
+Final Project
+
+    The project of writing a C program that will take input of arithmetic expressions, 
+and print out a correct MIPS program to carry out the computations and print the results.
+
+    This project seems interesting to me for a number of reasons.  It would give me more experience 
+with processing strings in C, then using this information to write loops that will produce the
+correct output.  I think it would be interesting to create a program that did this and write a master 
+program that will first run the C program to translate the arithmetic expression into MIPS, then have 
+the program tell you when that has completed, and automatically run the MIPS Program.  An additional nice 
+feature would be to add in a check program in C to ensure the C program made the correct translation, and that 
+translation was carried out properly.  I would like to solidify my understanding of the C language
+and this would be an excellent way to accomplish that.  
+
+    The second option would also be a good final project, but would be my second choice.  
+
